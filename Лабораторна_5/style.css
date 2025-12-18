@@ -1,0 +1,339 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+header {
+    background-color: #1a1a1a;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: #4da5a5;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    top: 25px;
+    left: 0;
+    z-index: 1;
+    padding: 10px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.4s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #000;
+}
+
+.dropdown-content .new-item {
+    color: #e74c3c;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-tariff {
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.btn-tariff:hover {
+    background-color: white;
+    color: black;
+}
+
+.login-link {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px; 
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+
+.card-light {
+    background-color: #383526; 
+}
+
+.card-optimal {
+    background-color: #3e2b20; 
+}
+
+.card-max {
+    background-color: #1a3033;
+}
+
+.card h2 {
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.4;
+    height: 50px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #ccc;
+}
+
+.stats span {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-subscribe {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+    transition: transform 0.2s;
+}
+
+.btn-subscribe:hover {
+    transform: scale(1.05);
+}
+
+.price-block {
+    margin-bottom: 5px;
+}
+
+.price-label {
+    font-size: 14px;
+}
+
+.price-value {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.price-currency {
+    font-size: 14px;
+}
+
+.trial-info {
+    font-size: 12px;
+    color: #bbb;
+    text-decoration: line-through; /* імітація старої ціни, або просто текст */
+    text-decoration: none;
+}
+
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #61ceab;
+    color: black;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform: rotate(5deg) translateY(-10px); /* Легкий нахил для стилю */
+}
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-form {
+    background-color: #2a2a2a;
+    padding: 40px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4da5a5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    background-color: #3b8282;
+}
+
+
+@media (max-width: 950px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+}
